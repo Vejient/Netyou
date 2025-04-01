@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arcanum - Descarga software profesional desarrollado en Python. Herramientas de alta calidad para tus necesidades.">
+    <meta name="keywords" content="python, software, descargas, herramientas, Netyou, Arcanum">
+    <title>Arcanum - Python Software Downloads</title>
+    <link rel="icon" type="image/x-icon" href="images/arcanum-logo.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/arcanum-logo.png" alt="Arcanum Logo">
+                <span>Arcanum</span>
+            </div>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" id="login-link">Login</a></li>
+                <li><a href="#" id="cart-icon" class="cart-icon">🛒 <span id="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Python Software Solutions</h1>
+            <p>Professional tools developed by Arcanum</p>
+            <div class="hero-buttons">
+                <a href="#products" class="hero-btn primary">Explore Products</a>
+                <a href="contact.html" class="hero-btn secondary">Contact Us</a>
+            </div>
+        </section>
+
+        <section class="downloads" id="products">
+            <h2>Available Software</h2>
+            <div class="software-grid">
+                <div class="software-card">
+                    <img src="images/Netyou.ico" alt="Netyou">
+                    <h3>Netyou</h3>
+                    <p>Programa avanzado para descargar videos de múltiples plataformas con opciones de conversión y edición.</p>
+                    <div class="software-details">
+                        <span>Version: 0.4</span>
+                        <span>Size: 285MB</span>
+                    </div>
+                    <div class="software-features">
+                        <span class="feature">Multi-plataforma</span>
+                        <span class="feature">Alta velocidad</span>
+                        <span class="feature">Conversión</span>
+                    </div>
+                    <button class="download-btn" data-product="netyou">Download</button>
+                    <a href="netyou-versions.html" class="version-history-link">View Version History</a>
+                </div>
+
+                <div class="software-card">
+                    <img src="images/software2.png" alt="Software 2">
+                    <h3>Automation Suite</h3>
+                    <p>Streamline your workflow with our automation tools</p>
+                    <div class="software-details">
+                        <span>Version: 1.5.2</span>
+                        <span>Size: 8MB</span>
+                    </div>
+                    <button class="download-btn">Download</button>
+                </div>
+
+                <div class="software-card">
+                    <img src="images/software3.png" alt="Software 3">
+                    <h3>Security Scanner</h3>
+                    <p>Advanced security analysis and vulnerability detection</p>
+                    <div class="software-details">
+                        <span>Version: 3.0.1</span>
+                        <span>Size: 12MB</span>
+                    </div>
+                    <button class="download-btn">Download</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: support@arcanum.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="support.html#documentation">Documentation</a></li>
+                    <li><a href="support.html#faq">FAQ</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get updates on new releases</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email" id="newsletter-email">
+                    <button id="newsletter-submit">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Arcanum. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
