@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compra software Python profesional. Herramientas de alta calidad para desarrolladores.">
+    <title>Arcanum - Store</title>
+    <link rel="icon" type="image/x-icon" href="images/arcanum-logo.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/arcanum-logo.png" alt="Arcanum Logo">
+                <span>Arcanum</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="store.html" class="active">Store</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" id="login-link">Login</a></li>
+                <li><a href="#" id="cart-icon" class="cart-icon">🛒 <span id="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Python Software Store</h1>
+            <p>Download free software or purchase premium tools</p>
+            <div class="hero-buttons">
+                <a href="#free-software" class="hero-btn primary">Free Software</a>
+                <a href="#premium-software" class="hero-btn secondary">Premium Software</a>
+            </div>
+        </section>
+
+        <section class="store-controls">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search software...">
+                <button id="search-btn">Search</button>
+            </div>
+            <div class="filter-controls">
+                <div class="sort-options">
+                    <label for="sort">Sort by:</label>
+                    <select id="sort" class="filter-select">
+                        <option value="newest">Newest First</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+                <div class="category-options">
+                    <label for="category">Category:</label>
+                    <select id="category" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="utilities">Utilities</option>
+                        <option value="development">Development</option>
+                        <option value="security">Security</option>
+                        <option value="data-science">Data Science</option>
+                        <option value="automation">Automation</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section id="free-software" class="software-section">
+            <h2>Free Software</h2>
+            <div class="software-grid">
+                <div class="software-card" data-category="utilities" data-price="0">
+                    <img src="images/Netyou.ico" alt="Netyou Lite">
+                    <div class="software-badge free">Free</div>
+                    <h3>Netyou Lite</h3>
+                    <p>Versión básica del gestor de descargas de videos con funcionalidades esenciales.</p>
+                    <div class="software-details">
+                        <span>Version: 0.2</span>
+                        <span>Size: 120MB</span>
+                    </div>
+                    <div class="software-features">
+                        <span class="feature">Multi-plataforma</span>
+                        <span class="feature">Descarga básica</span>
+                    </div>
+                    <button class="download-btn" data-product="netyou-lite" data-requires-auth="true">Download</button>
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+
+                <div class="software-card" data-category="development" data-price="0">
+                    <img src="images/software2.png" alt="PyCode Editor">
+                    <div class="software-badge free">Free</div>
+                    <h3>PyCode Editor</h3>
+                    <p>Editor de código simple para Python con resaltado de sintaxis.</p>
+                    <div class="software-details">
+                        <span>Version: 1.0</span>
+                        <span>Size: 8MB</span>
+                    </div>
+                    <div class="software-features">
+                        <span class="feature">Syntax Highlighting</span>
+                        <span class="feature">Auto-indent</span>
+                    </div>
+                    <button class="download-btn" data-product="pycode-editor" data-requires-auth="true">Download</button>
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+
+                <div class="software-card" data-category="utilities" data-price="0">
+                    <img src="images/software3.png" alt="File Converter">
+                    <div class="software-badge free">Free</div>
+                    <h3>File Converter</h3>
+                    <p>Herramienta simple para convertir entre diferentes formatos de archivo.</p>
+                    <div class="software-details">
+                        <span>Version: 2.1</span>
+                        <span>Size: 5MB</span>
+                    </div>
+                    <div class="software-features">
+                        <span class="feature">Multiple formats</span>
+                        <span class="feature">Batch conversion</span>
+                    </div>
+                    <button class="download-btn" data-product="file-converter" data-requires-auth="true">Download</button>
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="premium-software" class="software-section">
+            <h2>Premium Software</h2>
+            <div class="software-grid">
+                <div class="software-card" data-category="utilities" data-price="29.99">
+                    <img src="images/Netyou.ico" alt="Netyou Pro">
+                    <div class="software-badge premium">$29.99</div>
+                    <h3>Netyou Pro</h3>
+                    <p>Versión completa del gestor de descargas de videos con todas las funcionalidades premium.</p>
+                    <div class="software-details">
+                        <span>Version: 0.4</span>
+                        <span>Size: 285MB</span>
+                    </div>
+                    <div class="software-features">
+                        <span class="feature">Multi-plataforma</span>
+                        <span class="feature">Alta velocidad</span>
+                        <span class="feature">Conversión</span>
+                        <span class="feature">4K Support</span>
+                    </div>
+                    <button class="buy-btn" data-product="netyou-pro" data-price="29.99" data-requires-auth="true">Add to Cart</button>
+                    <a href="netyou-versions.html" class="view-details">View Details</a>
+                </div>
+
+                <div class="software-card" data-category="data-science" data-price="49.99">
+                    <img src="images/software2.png" alt="Data Analyzer Pro">
+                    <div class="software-badge premium">$49.99</div>
+                    <h3>Data Analyzer Pro</h3>
+                    <p>Herramienta avanzada para análisis de datos con visualizaciones interactivas.</p>
+                    <div class="software-details">
+                        <span>Version: 2.0</span>
+                        <span>Size: 45MB</span>
+                    </div>
+                    <div class="software-features">
+                        <span class="feature">Interactive charts</span>
+                        <span class="feature">ML algorithms</span>
+                        <span

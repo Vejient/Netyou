@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora nuestra gama de software Python profesional. Herramientas de alta calidad para desarrolladores.">
+    <title>Arcanum - Products</title>
+    <link rel="icon" type="image/x-icon" href="images/arcanum-logo.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/arcanum-logo.png" alt="Arcanum Logo">
+                <span>Arcanum</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" id="login-link">Login</a></li>
+                <li><a href="#" id="cart-icon" class="cart-icon">🛒 <span id="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Our Products</h1>
+            <p>Discover our Python software solutions</p>
+            <div class="hero-buttons">
+                <a href="#" class="hero-btn primary">Filter Products</a>
+                <a href="contact.html" class="hero-btn secondary">Request Custom Solution</a>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="filter-controls">
+                <div class="sort-options">
+                    <label for="sort">Sort by:</label>
+                    <select id="sort" class="filter-select">
+                        <option value="newest">Newest First</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="downloads">Most Downloads</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+                <div class="category-options">
+                    <label for="category">Category:</label>
+                    <select id="category" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="utilities">Utilities</option>
+                        <option value="development">Development</option>
+                        <option value="security">Security</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Netyou.ico" alt="Netyou">
+                        <div class="product-badge">New</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Netyou</h3>
+                        <p>Video download manager with advanced features for multiple platforms</p>
+                        <div class="software-features">
+                            <span class="feature">Multi-platform</span>
+                            <span class="feature">High-speed</span>
+                            <span class="feature">Conversion</span>
+                        </div>
+                        <div class="product-stats">
+                            <span>⭐ 4.8/5</span>
+                            <span>📥 10k+</span>
+                        </div>
+                        <div class="product-version">Version 0.4</div>
+                        <a href="netyou-versions.html" class="view-details">View Details</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/software2.png" alt="Automation Suite">
+                        <div class="product-badge popular">Popular</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Automation Suite</h3>
+                        <p>Streamline your workflow with powerful automation tools</p>
+                        <div class="product-stats">
+                            <span>⭐ 4.6/5</span>
+                            <span>📥 8k+</span>
+                        </div>
+                        <div class="product-version">Version 1.5.2</div>
+                        <a href="#" class="view-details">View Details</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/software3.png" alt="Security Scanner">
+                    </div>
+                    <div class="product-info">
+                        <h3>Security Scanner</h3>
+                        <p>Advanced security analysis and vulnerability detection</p>
+                        <div class="product-stats">
+                            <span>⭐ 4.7/5</span>
+                            <span>📥 5k+</span>
+                        </div>
+                        <div class="product-version">Version 3.0.1</div>
+                        <a href="#" class="view-details">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: support@arcanum.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="support.html#documentation">Documentation</a></li>
+                    <li><a href="support.html#faq">FAQ</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Arcanum. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

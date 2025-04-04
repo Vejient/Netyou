@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Historial de versiones de Netyou, nuestro gestor de descargas de videos. Consulta las novedades y mejoras.">
+    <title>Netyou - Version History</title>
+    <link rel="icon" type="image/x-icon" href="images/Netyou.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/arcanum-logo.png" alt="Arcanum Logo">
+                <span>Arcanum</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" id="login-link">Login</a></li>
+                <li><a href="#" id="cart-icon" class="cart-icon">🛒 <span id="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Netyou Version History</h1>
+            <p>Complete version history and changelog</p>
+            <div class="hero-buttons">
+                <a href="index.html#products" class="hero-btn primary">Back to Products</a>
+                <a href="contact.html" class="hero-btn secondary">Report an Issue</a>
+            </div>
+        </section>
+
+        <section class="version-history">
+            <div class="version-container">
+                <div class="version-card">
+                    <h3>Version 0.4 (Current)</h3>
+                    <p class="release-date">Released: January 2024</p>
+                    <ul class="changelog">
+                        <li>Improved download speed by 30%</li>
+                        <li>Added support for 4K video downloads</li>
+                        <li>New user interface with dark mode</li>
+                        <li>Fixed compatibility issues with Windows 11</li>
+                        <li>Size: 285MB</li>
+                    </ul>
+                    <button class="download-btn" data-product="netyou-v0.4">Download v0.4</button>
+                </div>
+
+                <div class="version-card">
+                    <h3>Version 0.3</h3>
+                    <p class="release-date">Released: December 2023</p>
+                    <ul class="changelog">
+                        <li>Added batch download functionality</li>
+                        <li>Improved video format conversion options</li>
+                        <li>Added playlist support for multiple platforms</li>
+                        <li>Fixed audio sync issues in converted videos</li>
+                        <li>Size: 280MB</li>
+                    </ul>
+                    <button class="download-btn" data-product="netyou-v0.3">Download v0.3</button>
+                </div>
+
+                <div class="version-card">
+                    <h3>Version 0.2</h3>
+                    <p class="release-date">Released: November 2023</p>
+                    <ul class="changelog">
+                        <li>Initial multi-platform support</li>
+                        <li>Basic video conversion capabilities</li>
+                        <li>Improved download stability</li>
+                        <li>Added support for subtitles download</li>
+                        <li>Size: 275MB</li>
+                    </ul>
+                    <button class="download-btn" data-product="netyou-v0.2">Download v0.2</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: support@arcanum.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="support.html#documentation">Documentation</a></li>
+                    <li><a href="support.html#faq">FAQ</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Arcanum. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
